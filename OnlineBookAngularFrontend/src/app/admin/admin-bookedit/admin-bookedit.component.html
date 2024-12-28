@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <style>
+        body {
+            background-image: url('https://images.alphacoders.com/132/thumb-1920-1326370.png');
+            background-size: cover; /* Make the image cover the entire screen */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 218, 185, 0.7); /* Make the container semi-transparent */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            width: 100%; /* Make button width 100% */
+            padding: 10px; /* Adjust padding to match input fields */
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+      </style>
+</head>
+<body>
+    <app-aheader></app-aheader>
+    <div class="container my-5">
+      <form [formGroup]="updtBook" (ngSubmit)="updateBook(updtBook.value)" class="bordered-form" novalidate>
+        <div class="form-group">
+          <label for="validationCustom01" for="inputAddress2"><b>Author</b></label>
+          <input type="text" name="author" class="form-control" formControlName="author" id="inputAddress2" placeholder="Enter author name" [ngModel]="book.author" required>
+        </div>
+        <div class="form-group">
+          <label  for="validationCustom01" for="inputEmail4"><b>Book Name</b></label>
+          <input type="text" name="name" formControlName="name" class="form-control" id="inputEmail4" placeholder="Enter book name" [ngModel]="book.name" required>
+        </div>
+        <div class="form-group">
+          <label for="validationCustom01" for="inputPassword4"><b>Price</b></label>
+          <input type="number" name="price" formControlName="price" class="form-control" id="inputPassword4" placeholder="Enter price" [ngModel]="book.price" required>
+        </div>
+        <div class="form-group">
+          <label for="validationCustom01" for="inputAddress2"><b>Category</b></label>
+          <input type="text" name="category" class="form-control" formControlName="category" id="inputAddress2" placeholder="Enter category" [ngModel]="book.category" requireds>
+        </div>
+        <!-- Update button dimensions adjusted -->
+        <button type="submit" class="btn btn-primary">Update book</button>
+      </form>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <app-afooter></app-afooter>
+</body>
+</html>

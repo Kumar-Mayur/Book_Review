@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {  font-family: 'Poppins', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+        /* background-color: rgb(0,36,2); */
+        /* background: linear-gradient(59deg, rgba(0,36,2,1) 0%, rgba(10,111,100,1) 35%, rgba(38,77,32,1) 100%); */}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login</title>
+    <style>
+      /* Add background image to the entire screen */
+      body,
+      html {
+        
+        height: 100%; /* Set the height of the body and html to 100% */
+        /* background-image: url("http://static1.businessinsider.com/image/58d1b2fad349f9290d8b53c5-1200/a-large-section-of-the-store-is-dedicated-to-childrens-books.jpg"); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        font-family: Arial, sans-serif;
+        margin: 0; /* Removing default margin */
+      }
+
+      /* Use flexbox to center content */
+      .container {
+        display: flex;
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        height: 100%; /* Full height of the viewport */
+      }
+
+      /* Styling for the login box */
+      .login-box {
+        max-width: 800px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Main container box for heading, image, and form -->
+      <div class="login-box">
+        <!-- User Login Heading -->
+        <div class="text-center mt-4">
+            <h1 class="animate-charcter">User Login</h1>
+          </div>
+
+
+        <!-- Container for the image and form -->
+        <div class="d-flex align-items-center">
+          <!-- Image on the left side -->
+          <div style="flex: 1; max-width: 250px">
+            <img
+              src="https://www.freeiconspng.com/thumbs/login-icon/user-login-icon-29.png"
+              alt="Description of Image"
+              style="max-width: 100%"
+            />
+          </div>
+
+          <div style="flex: 2; padding-left: 20px">
+            <!-- Form for login -->
+            <form
+              [formGroup]="loginUser"
+              (ngSubmit)="loginUserfun(loginUser.value)"
+            >
+              <!-- Email input group with label beside input -->
+              <div class="form-group d-flex align-items-center mb-3">
+                <label
+                  for="exampleInputEmail1"
+                  class="mb-0 mr-2"
+                  style="color: #007bff; flex: 1"
+                  >Email Id:</label
+                >
+                <input
+                  type="text"
+                  name="email"
+                  formControlName="email"
+                  placeholder="Email Id"
+                  class="form-control form-control-sm"
+                  id="exampleInputEmail1"
+                  style="flex: 2"
+                />
+              </div>
+
+              <!-- Password input group with label beside input -->
+              <div class="form-group d-flex align-items-center mb-3">
+                <label
+                  for="exampleInputPassword1"
+                  class="mb-0 mr-2"
+                  style="color: #007bff; flex: 1"
+                  >Password:</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  formControlName="password"
+                  placeholder="Password"
+                  class="form-control form-control-sm"
+                  id="exampleInputPassword1"
+                  style="flex: 2"
+                />
+              </div>
+
+              <!-- Login and Create Account buttons -->
+              <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Login</button>
+                <button class="btn btn-success" (click)="onclk()">
+                  Create New Account
+                </button>
+              </div>
+            </form>
+
+            <div class="text-center text-danger mt-3">
+              <h2 *ngIf="invalid">{{ invalid }}</h2>
+            </div>
+          </div>
+          <!-- End of form container -->
+        </div>
+        <!-- End of main flex container -->
+      </div>
+      <!-- End of main box -->
+    </div>
+    <!-- End of main container -->
+  </body>
+</html>

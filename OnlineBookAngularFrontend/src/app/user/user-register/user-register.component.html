@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+    <style>
+      body {
+        background: url(/../../assets/images/6.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Ensures the image remains fixed during scrolling */
+        background-position: center center; /* Centers the image */
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Takes up full viewport height */
+      }
+
+      .form-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        padding: 20px;
+        /* Removed the margin as the parent .container will center this container */
+      }
+
+      input.form-control {
+        max-width: 300px; /* Decrease the width of input fields */
+        margin: 0 auto; /* Center the input fields if their parent has text-align: center */
+      }
+
+      .row {
+        margin-bottom: 15px;
+      }
+
+      .form-control {
+        max-width: 300px; /* Decreased the width of the input fields */
+      }
+      label {
+        margin-right: 15px; /* Adjust this value based on your desired gap */
+      }
+      /* ... your existing CSS ... */
+
+      .row {
+        display: flex;
+        justify-content: start;
+        align-items: center; /* This will vertically center the text and input field */
+        margin-bottom: 15px; /* Some space between each form-group */
+      }
+
+      .col-form-label {
+        flex: 1; /* Taking up 1 portion of available space */
+        margin-right: 10px; /* Some space between label and input field */
+      }
+
+      .col-input {
+        flex: 2; /* Taking up 2 portions of available space, hence double the width of label */
+      }
+
+      .form-control {
+        width: 100%; /* To make the input field occupy all the available space within its container */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ... existing header and styles ... -->
+
+    <div class="container">
+      <div class="form-container m-5 p-5">
+        <div class="text-center">
+          <h1 class="text-primary my-3">User Registration</h1>
+        </div>
+        <form [formGroup]="addUser" (ngSubmit)="insertUser(addUser.value)">
+          <div class="form-group row">
+            <label for="firstname" class="col-form-label">First Name</label>
+            <div class="col-input">
+              <input
+                type="text"
+                name="firstname"
+                formControlName="firstname"
+                class="form-control"
+                id="firstname"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="lastname" class="col-form-label">Last Name</label>
+            <div class="col-input">
+              <input
+                type="text"
+                name="lastname"
+                formControlName="lastname"
+                class="form-control"
+                id="lastname"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-form-label">Email id</label>
+            <div class="col-input">
+              <input
+                type="email"
+                name="email"
+                formControlName="email"
+                class="form-control"
+                id="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="phone" class="col-form-label">Phone No</label>
+            <div class="col-input">
+              <input
+                type="number"
+                name="phone"
+                formControlName="phone"
+                class="form-control"
+                id="phone"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="address" class="col-form-label">Address</label>
+            <div class="col-input">
+              <input
+                type="text"
+                name="address"
+                formControlName="address"
+                class="form-control"
+                id="address"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="password" class="col-form-label">Password</label>
+            <div class="col-input">
+              <input
+                type="password"
+                name="password"
+                formControlName="password"
+                class="form-control"
+                id="password"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

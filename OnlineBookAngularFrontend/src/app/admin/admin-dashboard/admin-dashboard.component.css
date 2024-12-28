@@ -1,0 +1,89 @@
+
+  .image-backgroud{
+    background: url(/../../assets/images/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .whiteBox{
+    background-color: #fff;
+    width: 450px;
+  }
+  .loginWrp{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .loginLogo{
+    padding: 30px;
+  }
+  
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+      font-weight: 600;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.clearfix{
+  padding: 0px 20px 20px 20px;
+
+}
+button{
+  margin-left: 10px;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+   --loader-color: #be5635; 
+  width: auto;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}

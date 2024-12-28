@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="admin-login.component.css" />
+  </head>
+  <body>
+    <div class="image-backgroud pb-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="loginWrp">
+              <div class="whiteBox">
+                <div class="loginLogo">
+                  <div class="text-center">
+                    <h1 class="animate-charcter">ADMIN LOGIN</h1>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <form [formGroup]="aLogin" (ngSubmit)="loginAdmin()">
+                  <div class="form-group Username">
+                    <label for="exampleInputEmail1">Username *</label>
+                    <input
+                      type="email"
+                      name="ausername"
+                      formControlName="ausername"
+                      placeholder="Enter Username"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      required
+                    />
+                  </div>
+                  <div class="form-group password">
+                    <label for="exampleInputPassword1">Password *</label>
+                    <input
+                      type="password"
+                      name="apassword"
+                      formControlName="apassword"
+                      placeholder="Enter Password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                     required
+                    />
+                  </div>
+                  <div class="mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-success btn-outline-warning"
+                    >
+                      Login
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button
+                      type="reset"
+                      class="btn btn-success btn-outline-warning"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </form>
+                <div class="text-center text-danger">
+                  <h2 *ngIf="invalid">{{ invalid }}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer bg-black pb-2">
+      <div class="container text-center">
+        <span class="text-black"
+          >Coptright&copy;2022 Reserved by ENZ Book Club.
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

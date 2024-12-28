@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Libre+Baskerville:ital@1&family=Ms+Madi&family=Oswald:wght@200&family=Rubik+Moonrocks&family=Updock&family=Whisper&display=swap");
+
+.home-page-image {
+  background: url(/../../assets/images/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#image-section{
+  margin: 0px;
+  padding: 0px;
+}
+.animate-charcter{
+  padding-top: 150px;
+}
+.lead{
+  color: #ffffff;
+  font-size: 30px;
+}
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #fff;
+  width: auto;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ffffff 47%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.lead-pargraph{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+}
+.btn-section{
+  padding-bottom: 150px;
+}
+
+.copyright {
+  padding: 0%;
+  margin: 0px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}

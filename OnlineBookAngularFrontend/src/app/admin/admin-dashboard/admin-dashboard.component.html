@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin-dashboard.component.css" />
+    <title>ENZ Book Club</title>
+  </head>
+  <body>
+    <app-aheader></app-aheader>
+    <div class="image-backgroud pb-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="loginWrp">
+              <div class="whiteBox">
+                <div class="loginLogo">
+                  <div class="text-center">
+                    <h1 class="animate-charcter">ADMIN LOGIN</h1>
+                  </div>
+                </div>
+                <div class="clearfix">
+                <p class="lead text-center">
+                  "ENZ Book Club" functions as a web platform dedicated to book
+                  enthusiasts, enabling them to both register and exchange their
+                  thoughts and evaluations regarding a curated collection of books.
+                </p>
+                <div class="loader my-4"></div>
+                <p class="text-center">
+                  Kindly show your support for the books worth reading by liking,
+                  commenting on, and sharing them
+                </p>
+                <button
+                class="btn btn-success btn-lg mb-3"
+                role="button"
+                (click)="gotoblist()"
+              >
+                Display Booklist</button
+              >&nbsp;&nbsp;&nbsp;
+              <button
+                class="btn btn-warning btn-lg mb-3"
+                role="button"
+                (click)="gotobrat()"
+              >
+                Display Ratinglist
+              </button>
+            </div>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer bg-black pb-2">
+      <div class="container text-center">
+        <span class="text-black">Copyright&copy;2022 Reserved by ENZ Book Club. </span>
+      </div>
+    </footer>
+    
+  </body>
+</html>

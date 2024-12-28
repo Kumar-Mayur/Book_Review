@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating & Review List</title>
+    <style>
+        /* Set the background image for the entire body */
+        body {
+            background-image: url('https://wallpaperaccess.com/full/4907599.jpg')!important;
+            background-size: cover    !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0; /* Removing default margin */
+        }
+        /* Additional styles for your content */
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        /* Additional styles for your table */
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #f5f5f5;
+        }
+        /* Additional styles for table header */
+        .table thead {
+            background-color: rgb(113, 9, 9);
+            color: white;
+        }
+        /* Additional styles for table cells */
+        .table th, .table td {
+            padding: 12px 15px;
+            border: 1px solid #555;
+            border-right: 2px solid white;
+        }
+        /* Additional styles for the last cell in each row */
+        .table th:last-child, .table td:last-child {
+            border-right: 2px solid black;
+        }
+        /* Additional styles for the table body */
+        .table tbody tr {
+            border-bottom: 2px solid #555;
+        }
+    </style>
+</head>
+<body>
+
+    <app-aheader></app-aheader>
+
+<div class="container my-5">
+    <div class="text-center my-4 text-dark">
+        <h1 style="color:white; font-size: 2.5em; letter-spacing: 2px; text-shadow: 2px 2px 4px #000; font-weight: bold;">
+            Rating & Review List
+        </h1>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Book</th>
+                <th scope="col">User</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rev of reviews" style="border-bottom: 2px solid #555;">
+            <th scope="row" style="padding: 10px 15px; border-right: 2px solid black;">{{rev.id}}</th>
+            <td style="padding: 10px 15px; border-right: 2px solid black;">{{ rev.bookname }}</td>
+            <td style="padding: 10px 15px; border-right: 2px solid black;">{{ rev.name }}</td>
+            <td style="padding: 10px 15px; border-right: 2px solid black">{{ rev.rating }}</td>
+            <td style="padding: 10px 15px;">{{ rev.review }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<!-- <app-afooter></app-afooter> -->
+
+</body>
+</html>

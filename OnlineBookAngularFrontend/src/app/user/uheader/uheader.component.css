@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@900&display=swap');
+#nvhead{
+    font-size: 37px;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+}
+.navbar-style{
+    background-color:black;
+}
+
+.navbar-brand{
+    color:white;
+}
+
+
+
+/* Make the navbar transparent */
+.navbar-style {
+    background-color: black; /* Set background color with transparency */
+    backdrop-filter: blur(10px); /* Apply a blur effect for a glassy look (optional) */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Add a subtle border at the bottom (optional) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Apply a shadow effect */
+}
+
+/* Style the navbar-brand (logo/text) */
+#nvhead {
+    color: white; /* Set the text color to black */
+    font-weight: bold; /* Optionally set font-weight for the text */
+}
+
+/* Style the navbar-toggler button icon */
+.navbar-toggler-icon {
+    background-color: black; /* Set the icon color to black */
+}
+
+/* Style the logout button */
+.btn-outline-warning {
+    color: white; /* Set the button text color to black */
+    border-color: white; /* Set the button border color to black */
+}
+
+
+.btn-outline-warning:hover {
+    color: white; 
+    background-color: black; 
+}

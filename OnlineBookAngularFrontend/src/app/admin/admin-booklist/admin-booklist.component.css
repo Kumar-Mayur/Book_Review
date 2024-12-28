@@ -1,0 +1,159 @@
+.mat-form-field{
+  width:100%;
+  border-bottom: 2px solid black;
+}
+.search::placeholder{
+color: gainsboro;
+}
+.search{
+  color:gainsboro;
+  font-size: 1.5rem;
+}
+
+table {
+  
+  margin-top:10px;
+  width: 100%;
+}
+th {
+     background-color: rgb(113, 9, 9)!important;
+}
+td, th {
+
+  color: gainsboro !important;
+  width: 25%;
+}
+
+.mat-paginator{
+    margin-top:10px;
+}
+
+
+.mat-form-field{
+  width:100%;
+  border-bottom: 2px solid black;
+}
+.search::placeholder{
+color: gainsboro;
+}
+.search{
+  color:gainsboro;
+  font-size: 1.5rem;
+}
+
+table {
+  
+  margin-top:10px;
+  width: 100%;
+}
+/* th {
+    background-color: white!important;
+} */
+td, th {
+
+  color: white !important;
+  width: 25%;
+}
+.mat-cell {
+  border: 1px solid black; /* Solid black border around table cells */
+}
+table {
+  border-collapse: collapse; /* This removes default cell spacing */
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid transparent; /* Set border color to transparent */
+}
+
+/* Define custom dark background colors for table cells */
+.bg-id {
+  background-color:white; /* Dark Gray for ID */
+  color: black; /* White text color for contrast */
+}
+
+.bg-name {
+  background-color:white; /* Almost Black for Name */
+  color: white; /* White text color for contrast */
+}
+
+.bg-author {
+  background-color: white; /* Dark Charcoal for Author */
+  color: white; /* White text color for contrast */
+}
+
+.bg-price {
+  background-color: white; /* Black for Price */
+  color: white; /* White text color for contrast */
+}
+
+.bg-category {
+  background-color: white; /* Dark Gray for Description */
+  color: white; /* White text color for contrast */
+}
+
+.bg-actions {
+  background-color: white; /* Dark Red for Actions */
+  color: white; /* White text color for contrast */
+}
+/* Define a glassy background effect */
+.glassy-background {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(5px); /* Apply a blur effect */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+td {
+  color: black !important;
+}
+#yes {
+color:white;
+}
+
+
+.with-border {
+border: 1px solid black;
+}
+
+
+
+/* Horizontal alignment for action buttons in table cells */
+.action-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add some margin between the buttons for spacing */
+.action-link button {
+  margin-right: 5px;
+}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+      font-weight: 600;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

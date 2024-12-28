@@ -1,0 +1,17 @@
+<app-uheader></app-uheader>
+  <div class="main">
+    <div class="profile-card">
+        <h1 class="image">User Profile</h1><hr>
+        <div class="data">
+            <h2 >Name : {{ supData.firstname }} {{ supData.lastname }}</h2>
+            <h2 >Email : {{ supData.email }}</h2>
+            <h2>Phone : {{ supData.phone }}</h2>
+            <h2 >Address : {{ supData.address }}</h2>
+            <br>
+            <button class="btn btn-primary btn-lg" (click)="edituprof(supData.id)">Update Profile</button>
+        </div>
+
+      </div>
+  </div>
+<br><br><br><br><br><br><br><br>
+  <app-ufooter></app-ufooter>

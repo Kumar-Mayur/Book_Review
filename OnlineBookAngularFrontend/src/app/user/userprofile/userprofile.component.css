@@ -1,0 +1,84 @@
+/* Main container */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://daily.jstor.org/wp-content/uploads/2014/11/oldbooks.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* Profile card styles */
+/* Profile card styles */
+.profile-card {
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px; /* Adjust the width as needed */
+    padding: 20px;
+    text-align: left; /* Text left-aligned */
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styles */
+.image {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center; /* Heading centered */
+}
+
+hr {
+    border: none;
+    border-top: 2px solid black;
+    margin: 10px 0;
+}
+
+/* Data styles */
+.data {
+    margin-top: 20px;
+}
+
+/* Properly formatted sections */
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.label {
+    flex: 1;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.value {
+    flex: 2;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    margin: 20px auto; /* Button centered */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

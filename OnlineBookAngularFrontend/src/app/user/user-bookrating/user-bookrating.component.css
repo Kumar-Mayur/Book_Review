@@ -1,0 +1,56 @@
+body {
+  background-image: url('https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?cs=srgb&dl=pexels-ricky-esquivel-1907785.jpg&fm=jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 40%;  /* smaller size */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;  /* space between the two components */
+}
+
+.rate-book-container {
+margin-bottom: 20px;}
+
+.fa-star.checked {
+  color: gold;
+}
+
+.form-floating label {
+  color: black;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #198754;
+}
+
+/* Adjustments for the range input */
+input[type="range"] {
+  width: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

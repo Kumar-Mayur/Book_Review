@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome User</title>
+    <style>
+        .main-background {
+            background-image: url('https://images.alphacoders.com/132/thumb-1920-1326370.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+             min-height: 100vh; 
+        }
+
+        .jumbotron {
+            background-color:rgba(252, 249, 249, 0.938);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Style for the changed text */
+        .welcome-text {
+            font-size: 36px; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            color: black; /* Darker text color */
+        }
+
+        .experience-text {
+            font-weight: bold; /* Make it bold */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-background">
+        <app-uheader></app-uheader>
+        <div class="container">
+            <div class="jumbotron my-5">
+                <h1 class="display-4 welcome-text">Hello, {{ cUser }}</h1>
+                <p class="lead">Greetings to the largest virtual book emporium.</p>
+                <hr class="my-3">
+                <p class="experience-text">Express your thoughts through the options of liking, commenting, and rating.</p>
+
+                <div class="button-container">
+                    <button class="btn btn-primary btn-lg" (click)="onNav()">Book List</button>
+                    <button class="btn btn-success btn-lg" (click)="onNav2()">User Profile</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

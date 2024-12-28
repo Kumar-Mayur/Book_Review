@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Assuming that Angular Material is already included -->
+  <style>
+    .bg-table-color {
+      background-color: #bcaeae;
+    }
+    .mat-elevation-z8 {
+      box-shadow: 0px 7px 8px -4px rgba(193, 18, 18, 0.2), 0px 12px 17px 2px rgba(0,0,0,0.14), 0px 5px 22px 4px rgba(0,0,0,0.12);
+    }
+    .mat-cell, .mat-header-cell {
+      padding: 16px;
+      font-family: 'Arial', sans-serif;
+    }
+    .mat-cell {
+      color: black !important;
+    }
+    .mat-header-cell {
+      color: #FFFFFF !important;
+    }
+    .btn-warning {
+      color: black;
+    }
+    
+    .search::placeholder {
+      font-size: 22px !important;
+      color: rgb(247, 239, 239);
+    }
+    .search-box {
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  width: 50%;  /* Reduce width of search input */
+  border: none; /* Remove borders */
+  outline: none; /* Remove focus outline */
+}
+
+/* Custom Styles for the Search Bar */
+.custom-search .mat-form-field-underline::before {
+    content: none;  /* Removes the underline */
+}
+
+.custom-search .mat-form-field-flex {
+    background-color: #f0f0f0;  /* A light gray background color */
+    border-radius: 5px;  /* Rounded corners */
+}
+
+.search {
+    width: 50%;
+    border: none;
+    outline: none;
+}
+
+.search::placeholder {
+    font-size: 16px;
+}
+h1 {
+        font-weight: bold;
+        color: rgba(241, 247, 243, 0.941);
+        font-size: 45px;
+    }
+
+    body {
+        background-image: url('https://cdn.wallpapersafari.com/96/66/qhGnAH.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    /* Adding vertical borders to the cells */
+.mat-cell, .mat-header-cell {
+    border-right: 1px solid rgb(11, 11, 11); /* light gray border color */
+}
+
+/* Removing the right border for the last cell in each row */
+.mat-cell:last-child, .mat-header-cell:last-child {
+    border-right: none;
+
+}
+
+
+  </style>
+
+</head>
+<body>
+
+
+
+  <app-uheader></app-uheader>
+
+  <div class="container my-5 text-center text-capitalize">
+    <h1><u>Book List</u></h1>
+  </div>
+  
+  <div class="container my-5">
+   
+    <div class="search-box">
+      <mat-form-field appearance="fill" class="custom-search">
+        <input class="search" matInput (keyup)="applyFilter($event)" placeholder="Search by Title, Author ,Category" #input>
+      </mat-form-field>
+      
+    
+  <!-- Progress Column -->
+
+  <div  class="mat-elevation-z8">
+    <table mat-table class="bg-table-color" [dataSource]="dataSource" matSort>
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.name}}</td>
+      </ng-container>
+    
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Author </th>
+        <td mat-cell *matCellDef="let row"> {{row.author}} </td>
+      </ng-container>
+
+      <!-- Fruit Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+        <td mat-cell *matCellDef="let row"> {{row.category}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="rate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rate </th>
+        <td mat-cell *matCellDef="let row"> 
+          <button class="btn btn-sm btn-warning " (click)="rateBook(row.id)">Review</button>
+          
+        </td>
+      </ng-container>
+
+      
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+
+<!-- <mat-paginator [pageSize]="2"  [pageSizeOptions]="[2,4]" aria-label="Select page of users"></mat-paginator>
+ -->
+
+
+
+
+</div>
+
+<app-ufooter></app-ufooter>

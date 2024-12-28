@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Rating</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <app-uheader></app-uheader>
+    <div class="container">
+        <div class="card-body">
+            <h1 class="card-title" style="font-weight: bold;">Book Details</h1><hr>
+            <h2 class="card-title">Book Name : {{book.name}}</h2>
+            <h2 class="card-title">Author : {{book.author}}</h2>
+            <h2 class="card-title">Price : {{book.price}}</h2>
+            <h2 class="card-title">Category : {{book.category}}</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <form [formGroup]="rateBook" (ngSubmit)="rateTheBook(rateBook.value, book.name)">
+            <label for="formControlRange" style="color:black;font-weight: bold;">Give Us Star Rating </label>
+            <div id="stars">
+                <span class="fa fa-star">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="fa fa-star">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="fa fa-star">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="fa fa-star">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="fa fa-star">&nbsp;</span>
+            </div>
+            <input type="range" name="rating" formControlName="rating" class="form-control-range" min="1" max="5" id="formControlRange" oninput="updateStars(this.value)">
+
+            <div class="form-floating mt-3">
+                <label for="floatingTextarea2">Review : </label>
+                <textarea class="form-control" name="review" formControlName="review" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+            <br>
+            <div class="text-center"> <!-- Center the button -->
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <app-ufooter></app-ufooter>
+
+</body>
+
+</html>
